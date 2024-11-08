@@ -87,7 +87,7 @@ mkCargoDerivation (args // {
       profileArgs="--release"
     fi
 
-    trunk ${trunkExtraArgs} build $profileArgs ${trunkExtraBuildArgs} "${trunkIndexPath}"
+    trunk ${trunkExtraArgs} build ${trunkExtraBuildArgs} "${trunkIndexPath}" $profileArgs
   '';
 
   installPhaseCommand = args.installPhaseCommand or ''
